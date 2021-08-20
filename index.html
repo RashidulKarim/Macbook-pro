@@ -23,7 +23,6 @@
         <ul class="flex font-bold mr-6">
           <li class="m-4"><a href="">Home</a></li>
           <li class="m-4"><a href="">Products</a></li>
-          <li class="m-4"><a href="">About</a></li>
           <li class="m-4"><a href="">Contact Us</a></li>
         </ul>
       </div>
@@ -58,6 +57,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="8GbMemory"
             >
               8GB unified memory
             </button>
@@ -69,6 +69,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="16GbMemory"
             >
               16GB unified memory
             </button>
@@ -84,6 +85,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="256GbStorage"
             >
               256GB SSD storage
             </button>
@@ -95,6 +97,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="512GbStorage"
             >
               512GB SSD storage
             </button>
@@ -106,6 +109,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="1TbStorage"
             >
               1TB SSD storage
             </button>
@@ -121,6 +125,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="freeDelivery"
             >
               Friday, Aug 25 Free Prime Delivery
             </button>
@@ -132,6 +137,7 @@
                 hover:bg-gray-200 hover:text-green-800
                 font-semibold
               "
+              id="chargedDelivery"
             >
               sunday, Aug 21 Delivery charge $20
             </button>
@@ -141,32 +147,32 @@
           <div class="my-8 w-1/2">
             <div class="flex justify-between py-2">
               <p class="font-bold">Best Price</p>
-              <p class="font-bold">$ <span>1299</span></p>
+              <p class="font-bold">$ <span id="bestPrice">1299</span></p>
             </div>
             <hr />
             <div class="flex justify-between py-2">
               <p class="font-bold">Extra Memory Cost</p>
-              <p class="font-bold">$ <span>0</span></p>
+              <p class="font-bold">$ <span id="memoryCost">0</span></p>
             </div>
             <hr />
             <div class="flex justify-between py-2">
               <p class="font-bold">Extra Storage Cost</p>
-              <p class="font-bold">$ <span>0</span></p>
+              <p class="font-bold">$ <span id="storageCost">0</span></p>
             </div>
             <hr />
             <div class="flex justify-between py-2">
               <p class="font-bold">Delivery Charge</p>
-              <p class="font-bold">$ <span>0</span></p>
+              <p class="font-bold">$ <span id="deliveryCost">0</span></p>
             </div>
             <hr class="border-2 border-black bg-black" />
             <div class="flex justify-between py-2">
               <p class="font-bold">Total Price</p>
-              <p class="font-bold">$ <span>1299</span></p>
+              <p class="font-bold">$ <span id="totalPrice">1299</span></p>
             </div>
             <hr />
             <!-- promo code  -->
             <p class="mt-4 font-bold">Add Promo code</p>
-            <input class="border-2" type="text" name="" id="" />
+            <input class="border-2" type="text" name="" id="promoCode" />
             <button
               class="
                 border-2
@@ -177,16 +183,20 @@
                 text-white
                 font-bold
               "
+              id="promoApplyButton"
             >
               Apply
             </button>
+            <p id="promoError"></p>
           </div>
         </div>
       </section>
       <!-- calculation total with promo code -->
       <section class="text-center mb-10">
         <hr />
-        <h1 class="text-6xl mt-2 font-semibold">Total: $<span>1299</span></h1>
+        <h1 class="text-6xl mt-2 font-semibold">
+          Total: $<span id="totalPriceWithPromo">1299</span>
+        </h1>
       </section>
     </main>
     <footer class="bg-black">
