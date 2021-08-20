@@ -54,20 +54,23 @@ document.getElementById('chargedDelivery').addEventListener('click', function() 
 // work with promo code 
 document.getElementById('promoApplyButton').addEventListener('click', function() {
     const promoCode = document.getElementById('promoCode');
+    const totalPrice = document.getElementById('totalPriceWithPromo');
+    const totalPriceWithoutPromo = document.getElementById('totalPrice');
     const promoCodeText = promoCode.value;
+    const promoMassage = document.getElementById('promoMassage');
     if(promoCodeText == 'stevekaku'){
-        const totalPrice = document.getElementById('totalPriceWithPromo');
-        const totalPriceWithoutPromo = document.getElementById('totalPrice');
         const totalPriceWithoutPromoAmount = parseInt(totalPriceWithoutPromo.innerText)
         const totalPriceWithDiscount = Math.round((totalPriceWithoutPromoAmount/100) * 80);
         totalPrice.innerText = totalPriceWithDiscount;
         promoCode.value = ''
-        document.getElementById('promoError').innerText = '';
+        promoMassage.innerText = 'Congratulation , You got 20% discount.';
+        promoMassage.style.color = 'green';
+        document.getElementById('promoApplyButton').setAttribute('disabled', true)
+        document.getElementById('promoApplyButton').backgroundColor = 'gray'
     }
     else{
-        const promoError = document.getElementById('promoError');
-        promoError.innerText = "You input an invalid promo code";
-        promoError.style.color = 'red';
+        promoMassage.innerText = "You input an invalid promo code";
+        promoMassage.style.color = 'red';
         promoCode.value = ''
     }
 })
